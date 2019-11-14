@@ -13,6 +13,8 @@
 		6E61092F237DF5B300758352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E61092E237DF5B300758352 /* Assets.xcassets */; };
 		6E610932237DF5B300758352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E610930237DF5B300758352 /* LaunchScreen.storyboard */; };
 		6E610935237DF5B300758352 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E610934237DF5B300758352 /* main.m */; };
+		6E61093F237DFDD400758352 /* MBCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E61093E237DFDD400758352 /* MBCountry.m */; };
+		6E610943237DFF6F00758352 /* CountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E610942237DFF6F00758352 /* CountryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		6E610931237DF5B300758352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E610933237DF5B300758352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E610934237DF5B300758352 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6E61093D237DFDD400758352 /* MBCountry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBCountry.h; sourceTree = "<group>"; };
+		6E61093E237DFDD400758352 /* MBCountry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBCountry.m; sourceTree = "<group>"; };
+		6E610941237DFF6E00758352 /* Countries-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Countries-Bridging-Header.h"; sourceTree = "<group>"; };
+		6E610942237DFF6F00758352 /* CountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,8 @@
 			children = (
 				6E61093B237DF5CC00758352 /* Storyboards */,
 				6E61093C237DF5DC00758352 /* Resources */,
-				6E610933237DF5B300758352 /* Info.plist */,
+				6E610940237DFECC00758352 /* Model */,
+				6E610944237DFFCC00758352 /* Model Controller */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -83,8 +90,27 @@
 				6E610925237DF5B200758352 /* SceneDelegate.h */,
 				6E610926237DF5B200758352 /* SceneDelegate.m */,
 				6E610934237DF5B300758352 /* main.m */,
+				6E610941237DFF6E00758352 /* Countries-Bridging-Header.h */,
+				6E610933237DF5B300758352 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6E610940237DFECC00758352 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E61093D237DFDD400758352 /* MBCountry.h */,
+				6E61093E237DFDD400758352 /* MBCountry.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E610944237DFFCC00758352 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E610942237DFF6F00758352 /* CountryController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +144,7 @@
 				TargetAttributes = {
 					6E61091E237DF5B200758352 = {
 						CreatedOnToolsVersion = 11.2;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -158,6 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E610924237DF5B200758352 /* AppDelegate.m in Sources */,
+				6E61093F237DFDD400758352 /* MBCountry.m in Sources */,
+				6E610943237DFF6F00758352 /* CountryController.swift in Sources */,
 				6E610935237DF5B300758352 /* main.m in Sources */,
 				6E610927237DF5B200758352 /* SceneDelegate.m in Sources */,
 			);
@@ -299,15 +328,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3F959XXFV;
-				INFOPLIST_FILE = Countries/Info.plist;
+				INFOPLIST_FILE = Countries/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellgbudge.Countries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Countries/Resources/Countries-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -316,15 +349,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3F959XXFV;
-				INFOPLIST_FILE = Countries/Info.plist;
+				INFOPLIST_FILE = Countries/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellgbudge.Countries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Countries/Resources/Countries-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

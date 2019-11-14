@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Countries-->
         <scene sceneID="vs7-FQ-c3b">
             <objects>
                 <tableViewController id="EYY-WW-dnX" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
                             <outlet property="delegate" destination="EYY-WW-dnX" id="sdj-1Z-Xj0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="VzF-XV-gZK"/>
+                    <navigationItem key="navigationItem" title="Countries" id="VzF-XV-gZK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lr-CI-ymi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,13 +77,13 @@
                                 <rect key="frame" x="20" y="141" width="218.5" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awb-B4-nZb">
-                                        <rect key="frame" x="0.0" y="0.0" width="128.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckz-TF-QHn">
-                                        <rect key="frame" x="155.5" y="0.0" width="63" height="30"/>
+                                        <rect key="frame" x="156" y="0.0" width="62.5" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="62.5" id="fho-9D-2AL"/>
                                         </constraints>
@@ -131,13 +131,13 @@
                                 <rect key="frame" x="16" y="353" width="222.5" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Native name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaX-WL-ZDA">
-                                        <rect key="frame" x="0.0" y="0.0" width="149" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hws-fg-XIF">
-                                        <rect key="frame" x="160" y="0.0" width="62.5" height="30"/>
+                                        <rect key="frame" x="159.5" y="0.0" width="63" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="62.5" id="M5i-h5-IAo"/>
                                         </constraints>
@@ -189,7 +189,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdR-Sh-hKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166.66666666666669" y="10.714285714285714"/>
+            <point key="canvasLocation" x="391" y="11"/>
         </scene>
     </scenes>
 </document>
